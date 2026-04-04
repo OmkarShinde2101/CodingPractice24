@@ -15,25 +15,45 @@ class Program
 
         //int[] merged = arr1.Concat(arr2).ToArray();
 
+        //foreach (int num in merged)
+        //{
+        //    Console.WriteLine(num);
+        //}
+
+        //int[] arr1 = [1, 2, 3];
+        //int[] arr2 = [4, 5, 6];
+
+        //List<int> list = new List<int>();
+
+        //list.AddRange(arr1);
+        //list.AddRange(arr2);
+
+        //int[] merged = list.ToArray();
+
         //foreach(int num in merged)
         //{
         //    Console.WriteLine(num);
         //}
 
-        int[] arr1 = [1, 2, 3];
-        int[] arr2 = [4, 5, 6];
+        //Find frequency of each number in array
 
-        List<int> list = new List<int>();
+        int[] arr = { 1, 2, 3, 1, 2, 1, 4 };
+        List<int> counted = new List<int>();
 
-        list.AddRange(arr1);
-        list.AddRange(arr2);
-
-        int[] merged = list.ToArray();
-
-        foreach(int num in merged)
+        foreach (int num in arr)
         {
-            Console.WriteLine(num);
+            if (!counted.Contains(num))
+            {
+                int count = 0;
+                foreach (int n in arr)
+                    if (n == num)
+                        count++;
+
+                Console.WriteLine($"{num} = {count} times");
+                counted.Add(num);
+            }
         }
+    }
+
 
     }
-}
