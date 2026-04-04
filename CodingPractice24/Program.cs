@@ -37,23 +37,37 @@ class Program
 
         //Find frequency of each number in array
 
-        int[] arr = { 1, 2, 3, 1, 2, 1, 4 };
-        List<int> counted = new List<int>();
+        //int[] arr = { 1, 2, 3, 1, 2, 1, 4 };
+        //List<int> counted = new List<int>();
 
-        foreach (int num in arr)
+        //foreach (int num in arr)
+        //{
+        //    if (!counted.Contains(num))
+        //    {
+        //        int count = 0;
+        //        foreach (int n in arr)
+        //            if (n == num)
+        //                count++;
+
+        //        Console.WriteLine($"{num} = {count} times");
+        //        counted.Add(num);
+        //    }
+        //}
+
+        //Find if a number exists in array
+
+        int[] arr = [1, 2, 3, 5, 6, 55, 33, 2, 1, 5, 7,3];
+        int num = 3;
+        foreach(int n in arr)
         {
-            if (!counted.Contains(num))
+            if(n==num)
             {
-                int count = 0;
-                foreach (int n in arr)
-                    if (n == num)
-                        count++;
-
-                Console.WriteLine($"{num} = {count} times");
-                counted.Add(num);
-            }
+                Console.WriteLine("It is Found");
+                return;
+            }          
         }
+            Console.WriteLine("Not Found");
     }
 
 
-    }
+}
