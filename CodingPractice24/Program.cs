@@ -130,14 +130,28 @@ class Program
 
         // Find the average of all numbers
 
-        Console.WriteLine("Enter a numbers");
+        //Console.WriteLine("Enter a numbers");
+        //string input = Console.ReadLine();
+
+        //double[] arr = input.Split(' ').Select(x => double.Parse(x)).ToArray();
+
+        //double avg = arr.Average();
+
+        //Console.WriteLine("The average is" + avg);
+
+        //Filter numbers greater than 10 using linq
+
+        Console.WriteLine("Enter numbers");
         string input = Console.ReadLine();
 
-        double[] arr = input.Split(' ').Select(x => double.Parse(x)).ToArray();
+        int[] arr = input.Split(' ').Select(x => int.Parse(x)).ToArray();
 
-        double avg = arr.Average();
-
-        Console.WriteLine("The average is" + avg);
+        var numbers = arr.Where(x => x > 10);
+            
+            foreach(int num in numbers)
+        {
+            Console.WriteLine(num);
+        }
 
     }
 
