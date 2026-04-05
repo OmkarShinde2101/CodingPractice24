@@ -83,16 +83,28 @@ class Program
 
         //Get all odd numbers from a list
 
-        int[] arr = [1, 4,6,8, 33, 9, 45,  78, 98,543];
+        //int[] arr = [1, 4,6,8, 33, 9, 45,  78, 98,543];
 
-        var oddnumbers = arr.Where(x => x % 2 != 0);
+        //var oddnumbers = arr.Where(x => x % 2 != 0);
 
-        Console.WriteLine("The odd numbers are");
+        //Console.WriteLine("The odd numbers are");
 
-        foreach(var num in oddnumbers)
-        {
-            Console.WriteLine(num);
-        }
+        //foreach(var num in oddnumbers)
+        //{
+        //    Console.WriteLine(num);
+        //}
+
+        //Find the largest number using LINQ
+
+        Console.WriteLine("Enter Numbers");
+
+        string input = Console.ReadLine();
+
+        int[] arr = input.Split(' ').Select(x => int.Parse(x)).ToArray();
+
+        int largest = arr.Max();
+
+        Console.WriteLine("The largest number is " + largest);
     }
 
 
