@@ -56,17 +56,30 @@ class Program
 
         //Find if a number exists in array
 
-        int[] arr = [1, 2, 3, 5, 6, 55, 33, 2, 1, 5, 7,3];
-        int num = 3;
-        foreach(int n in arr)
+        //int[] arr = [1, 2, 3, 5, 6, 55, 33, 2, 1, 5, 7,3];
+        //int num = 3;
+        //foreach(int n in arr)
+        //{
+        //    if(n==num)
+        //    {
+        //        Console.WriteLine("It is Found");
+        //        return;
+        //    }          
+        //}
+        //    Console.WriteLine("Not Found");
+
+        //Get all even numbers from a list
+
+        int[] arr = [1, 2, 3, 4, 55, 44, 9, 555, 66, 22, 34, 78, 12];
+
+        var evennumbers = arr.Where(x => x % 2 == 0);
+
+        Console.WriteLine("The even numbers are");
+
+        foreach(var num in evennumbers)
         {
-            if(n==num)
-            {
-                Console.WriteLine("It is Found");
-                return;
-            }          
+            Console.WriteLine(num);
         }
-            Console.WriteLine("Not Found");
     }
 
 
