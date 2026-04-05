@@ -96,15 +96,26 @@ class Program
 
         //Find the largest number using LINQ
 
-        Console.WriteLine("Enter Numbers");
+        //Console.WriteLine("Enter Numbers");
 
+        //string input = Console.ReadLine();
+
+        //int[] arr = input.Split(' ').Select(x => int.Parse(x)).ToArray();
+
+        //int largest = arr.Max();
+
+        //Console.WriteLine("The largest number is " + largest);
+
+        //Find the smallest number using LINQ
+
+        Console.WriteLine("Enter Numbers");
         string input = Console.ReadLine();
 
         int[] arr = input.Split(' ').Select(x => int.Parse(x)).ToArray();
 
-        int largest = arr.Max();
+        int smallest = arr.Min();
 
-        Console.WriteLine("The largest number is " + largest);
+        Console.WriteLine("The smallest number is " + smallest);
     }
 
 
