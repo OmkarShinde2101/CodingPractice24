@@ -70,13 +70,26 @@ class Program
 
         //Get all even numbers from a list
 
-        int[] arr = [1, 2, 3, 4, 55, 44, 9, 555, 66, 22, 34, 78, 12];
+        //int[] arr = [1, 2, 3, 4, 55, 44, 9, 555, 66, 22, 34, 78, 12];
 
-        var evennumbers = arr.Where(x => x % 2 == 0);
+        //var evennumbers = arr.Where(x => x % 2 == 0);
 
-        Console.WriteLine("The even numbers are");
+        //Console.WriteLine("The even numbers are");
 
-        foreach(var num in evennumbers)
+        //foreach(var num in evennumbers)
+        //{
+        //    Console.WriteLine(num);
+        //}
+
+        //Get all odd numbers from a list
+
+        int[] arr = [1, 4,6,8, 33, 9, 45,  78, 98,543];
+
+        var oddnumbers = arr.Where(x => x % 2 != 0);
+
+        Console.WriteLine("The odd numbers are");
+
+        foreach(var num in oddnumbers)
         {
             Console.WriteLine(num);
         }
