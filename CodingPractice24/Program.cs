@@ -108,14 +108,25 @@ class Program
 
         //Find the smallest number using LINQ
 
-        Console.WriteLine("Enter Numbers");
+        //Console.WriteLine("Enter Numbers");
+        //string input = Console.ReadLine();
+
+        //int[] arr = input.Split(' ').Select(x => int.Parse(x)).ToArray();
+
+        //int smallest = arr.Min();
+
+        //Console.WriteLine("The smallest number is " + smallest);
+
+        //Find the sum of all numbers
+
+        Console.WriteLine("Enter a numbers");
         string input = Console.ReadLine();
 
         int[] arr = input.Split(' ').Select(x => int.Parse(x)).ToArray();
 
-        int smallest = arr.Min();
+        int sum = arr.Sum();
 
-        Console.WriteLine("The smallest number is " + smallest);
+        Console.WriteLine("The sum is " + sum);
     }
 
 
