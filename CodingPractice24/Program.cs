@@ -119,14 +119,26 @@ class Program
 
         //Find the sum of all numbers
 
+        //Console.WriteLine("Enter a numbers");
+        //string input = Console.ReadLine();
+
+        //int[] arr = input.Split(' ').Select(x => int.Parse(x)).ToArray();
+
+        //int sum = arr.Sum();
+
+        //Console.WriteLine("The sum is " + sum);
+
+        // Find the average of all numbers
+
         Console.WriteLine("Enter a numbers");
         string input = Console.ReadLine();
 
-        int[] arr = input.Split(' ').Select(x => int.Parse(x)).ToArray();
+        double[] arr = input.Split(' ').Select(x => double.Parse(x)).ToArray();
 
-        int sum = arr.Sum();
+        double avg = arr.Average();
 
-        Console.WriteLine("The sum is " + sum);
+        Console.WriteLine("The average is" + avg);
+
     }
 
 
