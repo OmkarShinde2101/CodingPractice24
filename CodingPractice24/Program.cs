@@ -178,11 +178,25 @@ class Program
 
         //Remove duplicates from a list
 
-        List<int> numbers = new List<int> { 1, 55,55, 1,7, 7, 88, 89, 45, 34, 23, 3, 33, 333 };
+        //List<int> numbers = new List<int> { 1, 55,55, 1,7, 7, 88, 89, 45, 34, 23, 3, 33, 333 };
 
-        var dupnumbers = numbers.Distinct();
+        //var dupnumbers = numbers.Distinct();
 
-        foreach(var num in dupnumbers)
+        //foreach(var num in dupnumbers)
+        //{
+        //    Console.WriteLine(num);
+        //}
+
+        //Reverse a list using LINQ
+
+        Console.WriteLine("Enter a numbers");
+        string input = Console.ReadLine();
+
+       int[] arr = input.Split(' ').Select(x=>int.Parse(x)).ToArray();
+
+        var numbers = arr.Reverse();
+
+            foreach(var num in numbers)
         {
             Console.WriteLine(num);
         }
