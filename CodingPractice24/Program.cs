@@ -167,11 +167,22 @@ class Program
 
         // Skip first 3 elements and get rest
 
-        List<int> numbers = new List<int> { 4, 8, 8, 9, 22, 12, 99, 56, 32 };
+        //List<int> numbers = new List<int> { 4, 8, 8, 9, 22, 12, 99, 56, 32 };
 
-        var restnumbers = numbers.Skip(3);
+        //var restnumbers = numbers.Skip(3);
 
-        foreach(var num in restnumbers)
+        //foreach(var num in restnumbers)
+        //{
+        //    Console.WriteLine(num);
+        //}
+
+        //Remove duplicates from a list
+
+        List<int> numbers = new List<int> { 1, 55,55, 1,7, 7, 88, 89, 45, 34, 23, 3, 33, 333 };
+
+        var dupnumbers = numbers.Distinct();
+
+        foreach(var num in dupnumbers)
         {
             Console.WriteLine(num);
         }
