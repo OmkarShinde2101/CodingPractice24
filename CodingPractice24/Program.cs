@@ -141,17 +141,34 @@ class Program
 
         //Filter numbers greater than 10 using linq
 
-        Console.WriteLine("Enter numbers");
-        string input = Console.ReadLine();
+        //Console.WriteLine("Enter numbers");
+        //string input = Console.ReadLine();
 
-        int[] arr = input.Split(' ').Select(x => int.Parse(x)).ToArray();
+        //int[] arr = input.Split(' ').Select(x => int.Parse(x)).ToArray();
 
-        var numbers = arr.Where(x => x > 10);
-            
-            foreach(int num in numbers)
+        //var numbers = arr.Where(x => x > 10);
+
+        //    foreach(int num in numbers)
+        //{
+        //    Console.WriteLine(num);
+        //}
+
+        //Get first 3 elements from a list
+
+
+        List<int> numbers = new List<int> { 1, 6, 9, 3, 2, 1, 55, 676, 44, 22, 2 };
+
+        var firstthree = numbers.Take(3);
+
+        foreach(var num in firstthree)
         {
             Console.WriteLine(num);
         }
+
+
+
+ 
+
 
     }
 
