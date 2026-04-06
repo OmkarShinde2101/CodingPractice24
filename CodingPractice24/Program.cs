@@ -156,18 +156,30 @@ class Program
         //Get first 3 elements from a list
 
 
-        List<int> numbers = new List<int> { 1, 6, 9, 3, 2, 1, 55, 676, 44, 22, 2 };
+        //List<int> numbers = new List<int> { 1, 6, 9, 3, 2, 1, 55, 676, 44, 22, 2 };
 
-        var firstthree = numbers.Take(3);
+        //var firstthree = numbers.Take(3);
 
-        foreach(var num in firstthree)
+        //foreach(var num in firstthree)
+        //{
+        //    Console.WriteLine(num);
+        //}
+
+        // Skip first 3 elements and get rest
+
+        List<int> numbers = new List<int> { 4, 8, 8, 9, 22, 12, 99, 56, 32 };
+
+        var restnumbers = numbers.Skip(3);
+
+        foreach(var num in restnumbers)
         {
             Console.WriteLine(num);
         }
 
 
 
- 
+
+
 
 
     }
