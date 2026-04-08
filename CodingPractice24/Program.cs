@@ -189,17 +189,36 @@ class Program
 
         //Reverse a list using LINQ
 
-        Console.WriteLine("Enter a numbers");
-        string input = Console.ReadLine();
+        // Console.WriteLine("Enter a numbers");
+        // string input = Console.ReadLine();
 
-       int[] arr = input.Split(' ').Select(x=>int.Parse(x)).ToArray();
+        //int[] arr = input.Split(' ').Select(x=>int.Parse(x)).ToArray();
 
-        var numbers = arr.Reverse();
+        // var numbers = arr.Reverse();
 
-            foreach(var num in numbers)
-        {
-            Console.WriteLine(num);
-        }
+        //     foreach(var num in numbers)
+        // {
+        //     Console.WriteLine(num);
+        // }
+
+        //Check if number  exists using linq
+
+        List<int> numbers = new List<int> { 1, 2, 55, 67, 34, 12, 78, 33, 55, 1 };
+
+        int searchNumber = 2;
+
+        bool exists = numbers.Contains(searchNumber);
+
+        
+            if (exists)
+            {
+                Console.WriteLine("It is found");
+            }
+            else
+            {
+                Console.WriteLine("It is Not Found");
+            }
+        
 
 
 
