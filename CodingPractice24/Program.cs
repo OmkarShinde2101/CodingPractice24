@@ -203,30 +203,56 @@ class Program
 
         //Check if number  exists using linq
 
-        List<int> numbers = new List<int> { 1, 2, 55, 67, 34, 12, 78, 33, 55, 1 };
+        //List<int> numbers = new List<int> { 1, 2, 55, 67, 34, 12, 78, 33, 55, 1 };
 
-        int searchNumber = 2;
+        //int searchNumber = 2;
 
-        bool exists = numbers.Contains(searchNumber);
+        //bool exists = numbers.Contains(searchNumber);
 
-        
-            if (exists)
+
+        //    if (exists)
+        //    {
+        //        Console.WriteLine("It is found");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("It is Not Found");
+        //    }
+
+        //Reverse the string using loop
+
+        //Console.WriteLine("Enter a string");
+        //string str = Console.ReadLine();
+
+        //string reversed = "";
+
+        //for (int i = str.Length - 1; i >= 0; i--)
+        //{
+        //    reversed += str[i];          
+        //}
+        //Console.WriteLine(reversed);
+
+        //reverse each character of word in given sentence
+
+        Console.WriteLine("Enter a sentence");
+        string str = Console.ReadLine();
+
+        string[] words = str.Split(' ');
+
+        string result = "";
+
+        foreach (string word in words)
+        {
+            string reversedsentence = "";
+
+            for (int i = word.Length - 1; i >= 0; i--)
             {
-                Console.WriteLine("It is found");
+                reversedsentence += word[i];
             }
-            else
-            {
-                Console.WriteLine("It is Not Found");
-            }
-        
 
-
-
-
-
-
-
+            result += reversedsentence + " ";
+        }
+        Console.WriteLine(result);
+    }
     }
 
-
-}
