@@ -370,20 +370,31 @@ class Program
 
         //swap the position of array first and last
 
-        int[] arr = { 99, 56, 54, 143 };
+        //int[] arr = { 99, 56, 54, 143 };
 
-        int i = 0;
-        int j = arr.Length - 1;
+        //int i = 0;
+        //int j = arr.Length - 1;
 
+        //int temp = arr [i];
+        //arr[i] = arr [j];
+        //arr [j] = temp;
 
-        int temp = arr [i];
-        arr[i] = arr [j];
-        arr [j] = temp;
+        //foreach (int num in arr)
+        //{
+        //    Console.WriteLine(num);
+        //}
 
-        foreach (int num in arr)
+        //reverse the array without using inbuild functions
+
+        int[] arr = { 2, 6, 89, 12, 1667 };
+
+        for (int i = arr.Length - 1; i >= 0; i--)
         {
-            Console.WriteLine(num);
+            Console.WriteLine(arr[i]);
         }
+
+
+
     }
 }
 
