@@ -386,12 +386,28 @@ class Program
 
         //reverse the array without using inbuild functions
 
-        int[] arr = { 2, 6, 89, 12, 1667 };
+        //int[] arr = { 2, 6, 89, 12, 1667 };
 
-        for (int i = arr.Length - 1; i >= 0; i--)
+        //for (int i = arr.Length - 1; i >= 0; i--)
+        //{
+        //    Console.WriteLine(arr[i]);
+        //}
+
+        //Count how many are True in boolean
+
+        bool[] arr = { false, true, true, false, false, true };
+
+        int count = 0;
+
+        for (int i = 0; i < arr.Length; i++)
         {
-            Console.WriteLine(arr[i]);
+            if (arr[i] == true)
+            {
+                count++;
+            }           
         }
+        Console.WriteLine(count);
+
 
 
 
