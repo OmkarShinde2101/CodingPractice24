@@ -1,15 +1,17 @@
 ﻿
 using System;
+using System.Threading.Channels;
+using System.Xml.Linq;
 
 class Program
 {
-    //static void Main()
-    //{
-    //    Console.WriteLine("Hello Coding Practice!");
-    //}
-
     static void Main()
     {
+        //    Console.WriteLine("Hello Coding Practice!");
+        //}
+
+        //static void Main()
+        //{
         //int[] arr1 = [1, 2, 3];
         //int[] arr2 = [4, 5, 6];
 
@@ -234,25 +236,160 @@ class Program
 
         //reverse each character of word in given sentence
 
-        Console.WriteLine("Enter a sentence");
-        string str = Console.ReadLine();
+        //Console.WriteLine("Enter a sentence");
+        //string str = Console.ReadLine();
 
-        string[] words = str.Split(' ');
+        //string[] words = str.Split(' ');
 
-        string result = "";
+        //string result = "";
 
-        foreach (string word in words)
+        //foreach (string word in words)
+        //{
+        //    string reversedsentence = "";
+
+        //    for (int i = word.Length - 1; i >= 0; i--)
+        //    {
+        //        reversedsentence += word[i];
+        //    }
+
+        //    result += reversedsentence + " ";
+        //}
+        //Console.WriteLine(result);
+
+        //remove duplicate charcater from string
+
+        //Console.WriteLine("Enetra a string");
+        //string str = Console.ReadLine();
+
+        //string result = "";
+
+        //for(int i=0; i<str.Length; i++)
+        //{
+        //    if (!result.Contains(str[i]))
+        //    {
+        //        result += str[i];
+        //    }
+        //}
+        //Console.WriteLine(result);
+
+        //convert degree celcous to fahreinheit
+
+        //Console.WriteLine("Enter a temp");
+        //double num = Convert.ToDouble(Console.ReadLine());
+
+        //double far = (9 / 5) * num + 32;
+
+        //Console.WriteLine(far);
+
+        //find longestword in sentence
+
+        //Console.WriteLine("Enter a word");
+        //string str = Console.ReadLine();
+
+        //string[] words = str.Split(' ');
+
+        //string longestword = "";
+
+        //foreach (string word in words)
+        //{
+        //    if (word.Length > longestword.Length)
+        //    {
+        //        longestword = word;
+        //    }
+        //}
+        //Console.WriteLine(longestword);
+
+        //Create a Student class
+
+        //Properties: Name, Age
+        //Constructor to set Name and Age
+        //Method to print student details
+
+        //    class Student
+        //{
+        //    // Properties
+        //    string Name;
+        //    int Age;
+
+        //    // Constructor
+        //    public Student(string name, int age)
+        //    {
+        //        Name = name;
+        //        Age = age;
+        //    }
+
+        //    // Method
+        //    public void PrintDetails()
+        //    {
+        //        Console.WriteLine($"Name: {Name}");
+        //        Console.WriteLine($"Age: {Age}");
+        //    }
+        //}
+
+        //class Program
+        //{
+        //    static void Main()
+        //    {
+        //        // Object
+        //        Student s1 = new Student("Omkar", 21);
+        //        s1.PrintDetails();
+        //    }
+        //}
+
+        //Find second largest number
+
+        //Console.WriteLine("Enter a numbers");
+        //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        //Array.Sort(arr);
+
+        //int secondlargestnumber = arr[arr.Length - 2];
+
+        //Console.WriteLine(secondlargestnumber);
+
+        //sort array without using sort
+
+        //int[] arr = { 9, 3, 33, 56 };
+
+        //for (int i = 0; i < arr.Length; i++)
+        //{
+        //    for (int j = i + 1; j < arr.Length; j++)
+        //    {
+        //        if (arr[i] > arr[j])
+        //        {
+        //            int temp = arr[i];
+        //            arr[i] = arr[j];
+        //            arr[j] = temp;
+        //        }
+        //    }
+        //}
+        //foreach (int num in arr)
+        //{
+        //    Console.WriteLine(num);
+        //}
+
+        //swap the position of array first and last
+
+        int[] arr = { 99, 56, 54, 143 };
+
+        int i = 0;
+        int j = arr.Length - 1;
+
+
+        int temp = arr [i];
+        arr[i] = arr [j];
+        arr [j] = temp;
+
+        foreach (int num in arr)
         {
-            string reversedsentence = "";
-
-            for (int i = word.Length - 1; i >= 0; i--)
-            {
-                reversedsentence += word[i];
-            }
-
-            result += reversedsentence + " ";
+            Console.WriteLine(num);
         }
-        Console.WriteLine(result);
     }
-    }
+}
+
+
+
+
+
+
 
