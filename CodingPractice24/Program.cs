@@ -410,20 +410,39 @@ class Program
 
         //Count how many are false in boolean
 
-        bool[] arr = { true, false, true, true, false };
+        //bool[] arr = { true, false, true, true, false };
 
-        int count = 0;
+        //int count = 0;
+
+        //for(int i=0; i<arr.Length; i++)
+        //{
+        //    if (arr[i] == false)
+        //    {
+        //        count++;
+        //    }
+        //}
+        //Console.WriteLine(count);
+
+        //Count True and False both
+
+        bool[] arr = { true, false, false, true, true };
+
+        int count1 = 0;
+        int count2 = 0;
 
         for(int i=0; i<arr.Length; i++)
         {
-            if (arr[i] == false)
+            if (arr[i]== true)
             {
-                count++;
+                count1++;
+            }
+            else
+            {
+                count2++;
             }
         }
-
-        Console.WriteLine(count);
-
+        Console.WriteLine(count1);
+        Console.WriteLine(count2);
 
 
 
