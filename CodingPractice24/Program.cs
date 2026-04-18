@@ -458,24 +458,80 @@ class Program
 
         //How to find given string is palindrome or not
 
-        Console.WriteLine("Enter  a string");
-        string str = Console.ReadLine();
+        //Console.WriteLine("Enter  a string");
+        //string str = Console.ReadLine();
 
-        string reversed = "";
+        //string reversed = "";
 
-        for(int i=str.Length-1; i>=0; i--)
-        {
-            reversed += str[i];
-        }
+        //for(int i=str.Length-1; i>=0; i--)
+        //{
+        //    reversed += str[i];
+        //}
 
-        if(reversed == str)
+        //if(reversed == str)
+        //{
+        //    Console.WriteLine("It is palindrome");
+        //}
+        //else
+        //{
+        //    Console.WriteLine("It is not palindrome");
+        //}
+
+        //How to find given integer is palindrome or not
+
+        //Console.WriteLine("Enter a Integer");
+        //int num = Convert.ToInt32(Console.ReadLine());
+
+        //string numStr = num.ToString();
+
+        //string reversed = "";
+
+        //for (int i = numStr.Length - 1; i >= 0; i--)
+        //{
+        //    reversed += numStr[i];
+        //}
+        //int reversedNum = Convert.ToInt32(reversed);
+
+        //if (reversedNum == num)
+        //{
+        //    Console.WriteLine("It is palindrome");
+        //}
+        //else
+        //{
+        //    Console.WriteLine("It is not palindrome");
+        //}
+
+        //How to reverse the order of words in a given sentence
+
+        //Console.WriteLine("Enter a sentence");
+        //string[] str = Console.ReadLine().Split(' ');
+
+        //string reversed = "";
+
+        //for (int i = str.Length - 1; i >= 0; i--)
+        //{
+        //    reversed += str[i] + " ";
+        //}
+        //Console.WriteLine(reversed );
+
+        //How to reverse each character of word in a given string sentence but keep it in same position
+
+        Console.WriteLine("Enter a sentence");
+        string[] str = Console.ReadLine().Split(' ');
+
+        string result = "";
+
+        foreach (string word in str)
         {
-            Console.WriteLine("It is palindrome");
+            string reversed = "";
+
+            for (int i = word.Length - 1; i >= 0; i--)
+            {
+                reversed += word[i];
+            }
+            result += reversed + " ";
         }
-        else
-        {
-            Console.WriteLine("It is not palindrome");
-        }
+        Console.WriteLine(result);
     }
 }
 
