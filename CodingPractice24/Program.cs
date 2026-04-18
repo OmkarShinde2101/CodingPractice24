@@ -446,16 +446,36 @@ class Program
 
         //reverse the string using loop 
 
-        Console.WriteLine("Enter a string");
+        //Console.WriteLine("Enter a string");
+        //string str = Console.ReadLine();
+        //string reversed = "";
+
+        //for(int i=str.Length-1; i>=0; i--)
+        //{
+        //    reversed += str[i];
+        //}
+        //Console.WriteLine(reversed);
+
+        //How to find given string is palindrome or not
+
+        Console.WriteLine("Enter  a string");
         string str = Console.ReadLine();
+
         string reversed = "";
 
         for(int i=str.Length-1; i>=0; i--)
         {
             reversed += str[i];
         }
-        Console.WriteLine(reversed);
 
+        if(reversed == str)
+        {
+            Console.WriteLine("It is palindrome");
+        }
+        else
+        {
+            Console.WriteLine("It is not palindrome");
+        }
     }
 }
 
