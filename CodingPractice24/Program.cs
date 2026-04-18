@@ -425,26 +425,36 @@ class Program
 
         //Count True and False both
 
-        bool[] arr = { true, false, false, true, true };
+        //bool[] arr = { true, false, false, true, true };
 
-        int count1 = 0;
-        int count2 = 0;
+        //int count1 = 0;
+        //int count2 = 0;
 
-        for(int i=0; i<arr.Length; i++)
+        //for(int i=0; i<arr.Length; i++)
+        //{
+        //    if (arr[i]== true)
+        //    {
+        //        count1++;
+        //    }
+        //    else
+        //    {
+        //        count2++;
+        //    }
+        //}
+        //Console.WriteLine(count1);
+        //Console.WriteLine(count2);
+
+        //reverse the string using loop 
+
+        Console.WriteLine("Enter a string");
+        string str = Console.ReadLine();
+        string reversed = "";
+
+        for(int i=str.Length-1; i>=0; i--)
         {
-            if (arr[i]== true)
-            {
-                count1++;
-            }
-            else
-            {
-                count2++;
-            }
+            reversed += str[i];
         }
-        Console.WriteLine(count1);
-        Console.WriteLine(count2);
-
-
+        Console.WriteLine(reversed);
 
     }
 }
