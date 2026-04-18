@@ -516,20 +516,45 @@ class Program
 
         //How to reverse each character of word in a given string sentence but keep it in same position
 
-        Console.WriteLine("Enter a sentence");
-        string[] str = Console.ReadLine().Split(' ');
+        //Console.WriteLine("Enter a sentence");
+        //string[] str = Console.ReadLine().Split(' ');
+
+        //string result = "";
+
+        //foreach (string word in str)
+        //{
+        //    string reversed = "";
+
+        //    for (int i = word.Length - 1; i >= 0; i--)
+        //    {
+        //        reversed += word[i];
+        //    }
+        //    result += reversed + " ";
+        //}
+        //Console.WriteLine(result);
+
+        //remove duplicate character from string
+
+        Console.WriteLine("Ennter a string");
+        string str = Console.ReadLine();
 
         string result = "";
 
-        foreach (string word in str)
+        for (int i = 0; i < str.Length; i++)
         {
-            string reversed = "";
+            int count = 0;
 
-            for (int i = word.Length - 1; i >= 0; i--)
+            for (int j = 0; j < result.Length; j++)
             {
-                reversed += word[i];
+                if (str[i] == result[j])
+                {
+                    count++;
+                }
             }
-            result += reversed + " ";
+            if (count == 0)
+            {
+                result += str[i];
+            }
         }
         Console.WriteLine(result);
     }
