@@ -560,26 +560,77 @@ class Program
 
         //sort the array wiout using sort
 
-        Console.WriteLine("Enter a string:");
-        string input = Console.ReadLine();
+        //Console.WriteLine("Enter a string:");
+        //string input = Console.ReadLine();
 
-        char[] arr = input.ToCharArray();
+        //char[] arr = input.ToCharArray();
 
-        for (int i = 0; i < arr.Length; i++)
+        //for (int i = 0; i < arr.Length; i++)
+        //{
+        //    for (int j = i + 1; j < arr.Length; j++)
+        //    {
+        //        if (arr[i] > arr[j])  
+        //        {
+        //            char temp = arr[i];
+        //            arr[i] = arr[j];
+        //            arr[j] = temp;
+        //        }
+        //    }
+        //}
+        //string result = new string(arr);
+        //Console.WriteLine("Sorted string: " + result);
+
+        //check the anagrm
+
+        Console.WriteLine("Enter a string1");
+        string str1 = Console.ReadLine();
+
+        Console.WriteLine("Enter a string2");
+        string str2 = Console.ReadLine();
+
+        char[] arr1 = str1.ToCharArray();
+        char[] arr2 = str2.ToCharArray();
+
+        for(int i=0; i<arr1.Length; i++)
         {
-            for (int j = i + 1; j < arr.Length; j++)
+            for(int j=i+1; j<arr1.Length; j++)
             {
-                if (arr[i] > arr[j])  
+                if (arr1[i]> arr1[j])
                 {
-                    char temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
+                    char temp = arr1[i];
+                    arr1[i] = arr1[j];
+                    arr1[j] = temp;
                 }
             }
         }
+        string result1 = new string(arr1);
+        Console.WriteLine(result1);
 
-        string result = new string(arr);
-        Console.WriteLine("Sorted string: " + result);
+        for(int m=0; m<arr2.Length; m++)
+        {
+            for(int n=m+1; n<arr2.Length; n++)
+            {
+                if (arr2[m] > arr2[n])
+                {
+                    char swap = arr2[m];
+                    arr2[m] = arr2[n];
+                    arr2[n] = swap;
+                }
+            }
+        }
+        string result2 = new string(arr2);
+        Console.WriteLine(result2);
+
+        if(result1 == result2)
+        {
+            Console.WriteLine("It is anagram");
+        }
+        else
+        {
+            Console.WriteLine("It is not anagram");
+        }
+
+
     }
 }
 
