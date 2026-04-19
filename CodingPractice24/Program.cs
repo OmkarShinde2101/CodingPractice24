@@ -683,26 +683,53 @@ class Program
 
         //find longestword in sentence using boolean
 
-        Console.WriteLine("Entaer  a sentence");
-        string str = Console.ReadLine();
+        //Console.WriteLine("Entaer  a sentence");
+        //string str = Console.ReadLine();
 
-        string[] words = str.Split(' ');
-        string longestword = "";
-        bool firstword = true;
+        //string[] words = str.Split(' ');
+        //string longestword = "";
+        //bool firstword = true;
 
-        foreach(string word in words)
+        //foreach(string word in words)
+        //{
+        //    if(firstword == true)
+        //    {
+        //        longestword = word;
+        //        firstword = false;
+        //    }
+        //    else if (word.Length>longestword.Length)
+        //            {
+        //        longestword = word;
+        //    }
+        //}
+        //Console.WriteLine(longestword);
+
+        //Find largest and smallest element in an array
+
+        Console.WriteLine("Enter a Numbers");
+        int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        for (int i = 0; i < arr.Length; i++)
         {
-            if(firstword == true)
+            for (int j = i + 1; j < arr.Length; j++)
             {
-                longestword = word;
-                firstword = false;
-            }
-            else if (word.Length>longestword.Length)
-                    {
-                longestword = word;
+                if (arr[i] > arr[j])
+                {
+                    int swap = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = swap;
+                }
             }
         }
-        Console.WriteLine(longestword);
+
+        int smallest = arr[0];
+        int largest = arr[arr.Length - 1];
+        int secondlargest = arr[arr.Length - 2];
+
+        Console.WriteLine(smallest);
+        Console.WriteLine(largest);
+        Console.WriteLine(secondlargest);
+
     }
 }
 
