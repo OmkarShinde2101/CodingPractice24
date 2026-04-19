@@ -706,29 +706,60 @@ class Program
 
         //Find largest and smallest element in an array
 
-        Console.WriteLine("Enter a Numbers");
+        //Console.WriteLine("Enter a Numbers");
+        //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        //for (int i = 0; i < arr.Length; i++)
+        //{
+        //    for (int j = i + 1; j < arr.Length; j++)
+        //    {
+        //        if (arr[i] > arr[j])
+        //        {
+        //            int swap = arr[i];
+        //            arr[i] = arr[j];
+        //            arr[j] = swap;
+        //        }
+        //    }
+        //}
+
+        //int smallest = arr[0];
+        //int largest = arr[arr.Length - 1];
+        //int secondlargest = arr[arr.Length - 2];
+
+        //Console.WriteLine(smallest);
+        //Console.WriteLine(largest);
+        //Console.WriteLine(secondlargest);
+
+        //find largest and smallest using boolean
+
+        Console.WriteLine("Enter Numbers");
         int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-        for (int i = 0; i < arr.Length; i++)
+        int smallest = 0;
+        int largest = 0;
+
+        bool first = true;
+
+        foreach (int num in arr)
         {
-            for (int j = i + 1; j < arr.Length; j++)
+            if (first == true)
             {
-                if (arr[i] > arr[j])
-                {
-                    int swap = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = swap;
-                }
+                smallest = num;
+                largest = num;
+                first = false;
+            }
+            else
+            {
+                if (num < smallest)
+                    smallest = num;
+
+                if (num > largest)
+                    largest = num;
             }
         }
 
-        int smallest = arr[0];
-        int largest = arr[arr.Length - 1];
-        int secondlargest = arr[arr.Length - 2];
-
-        Console.WriteLine(smallest);
-        Console.WriteLine(largest);
-        Console.WriteLine(secondlargest);
+        Console.WriteLine("Smallest: " + smallest);
+        Console.WriteLine("Largest: " + largest);
 
     }
 }
