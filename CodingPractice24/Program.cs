@@ -648,22 +648,38 @@ class Program
 
         //remove space from string using boolean
 
-        Console.WriteLine("Enter a string");
+        //Console.WriteLine("Enter a string");
+        //string str = Console.ReadLine();
+        //string result = "";
+
+        //for(int i=0; i<str.Length;  i++)
+        //{
+        //    bool isSpace = (str[i] == ' ');
+
+        //    if (isSpace == false)
+        //    {
+        //        result = result + str[i];
+        //    }
+        //}
+        //Console.WriteLine(result);
+
+        //find longest word in sentence
+
+        Console.WriteLine("Enter a sentence");
         string str = Console.ReadLine();
-        string result = "";
 
-        for(int i=0; i<str.Length;  i++)
+        string[] words = str.Split(' ');
+
+        string longestword = "";
+
+        foreach (string word in words)
         {
-            bool isSpace = (str[i] == ' ');
-
-            if (isSpace == false)
+            if (word.Length > longestword.Length)
             {
-                result = result + str[i];
+                longestword = word;
             }
         }
-
-        Console.WriteLine(result);
-
+        Console.WriteLine(longestword);
     }
 }
 
