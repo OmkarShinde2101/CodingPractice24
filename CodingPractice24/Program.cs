@@ -732,34 +732,48 @@ class Program
 
         //find largest and smallest using boolean
 
-        Console.WriteLine("Enter Numbers");
+        //Console.WriteLine("Enter Numbers");
+        //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        //int smallest = 0;
+        //int largest = 0;
+
+        //bool first = true;
+
+        //foreach (int num in arr)
+        //{
+        //    if (first == true)
+        //    {
+        //        smallest = num;
+        //        largest = num;
+        //        first = false;
+        //    }
+        //    else
+        //    {
+        //        if (num < smallest)
+        //            smallest = num;
+
+        //        if (num > largest)
+        //            largest = num;
+        //    }
+        //}
+
+        //Console.WriteLine("Smallest: " + smallest);
+        //Console.WriteLine("Largest: " + largest);
+
+        //reverse the array without using inbuild function
+
+        Console.WriteLine("Enter a Number");
         int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-        int smallest = 0;
-        int largest = 0;
+       
 
-        bool first = true;
-
-        foreach (int num in arr)
+        for(int i=arr.Length-1; i>=0; i--)
         {
-            if (first == true)
-            {
-                smallest = num;
-                largest = num;
-                first = false;
-            }
-            else
-            {
-                if (num < smallest)
-                    smallest = num;
-
-                if (num > largest)
-                    largest = num;
-            }
+            Console.WriteLine(arr[i]);
         }
 
-        Console.WriteLine("Smallest: " + smallest);
-        Console.WriteLine("Largest: " + largest);
+       
 
     }
 }
