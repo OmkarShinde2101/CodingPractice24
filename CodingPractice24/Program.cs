@@ -582,55 +582,69 @@ class Program
 
         //check the anagrm
 
-        Console.WriteLine("Enter a string1");
-        string str1 = Console.ReadLine();
+        //Console.WriteLine("Enter a string1");
+        //string str1 = Console.ReadLine();
 
-        Console.WriteLine("Enter a string2");
-        string str2 = Console.ReadLine();
+        //Console.WriteLine("Enter a string2");
+        //string str2 = Console.ReadLine();
 
-        char[] arr1 = str1.ToCharArray();
-        char[] arr2 = str2.ToCharArray();
+        //char[] arr1 = str1.ToCharArray();
+        //char[] arr2 = str2.ToCharArray();
 
-        for(int i=0; i<arr1.Length; i++)
+        //for(int i=0; i<arr1.Length; i++)
+        //{
+        //    for(int j=i+1; j<arr1.Length; j++)
+        //    {
+        //        if (arr1[i]> arr1[j])
+        //        {
+        //            char temp = arr1[i];
+        //            arr1[i] = arr1[j];
+        //            arr1[j] = temp;
+        //        }
+        //    }
+        //}
+        //string result1 = new string(arr1);
+        //Console.WriteLine(result1);
+
+        //for(int m=0; m<arr2.Length; m++)
+        //{
+        //    for(int n=m+1; n<arr2.Length; n++)
+        //    {
+        //        if (arr2[m] > arr2[n])
+        //        {
+        //            char swap = arr2[m];
+        //            arr2[m] = arr2[n];
+        //            arr2[n] = swap;
+        //        }
+        //    }
+        //}
+        //string result2 = new string(arr2);
+        //Console.WriteLine(result2);
+
+        //if(result1 == result2)
+        //{
+        //    Console.WriteLine("It is anagram");
+        //}
+        //else
+        //{
+        //    Console.WriteLine("It is not anagram");
+        //}
+
+        //remove space from the strig without using inbuild function
+
+        Console.WriteLine("Enter a string");
+        string str = Console.ReadLine();
+        string result = "";
+
+        for(int i= 0; i<str.Length; i++)
         {
-            for(int j=i+1; j<arr1.Length; j++)
+            if (str[i] != ' ')
             {
-                if (arr1[i]> arr1[j])
-                {
-                    char temp = arr1[i];
-                    arr1[i] = arr1[j];
-                    arr1[j] = temp;
-                }
+                result = result + str[i];
             }
         }
-        string result1 = new string(arr1);
-        Console.WriteLine(result1);
 
-        for(int m=0; m<arr2.Length; m++)
-        {
-            for(int n=m+1; n<arr2.Length; n++)
-            {
-                if (arr2[m] > arr2[n])
-                {
-                    char swap = arr2[m];
-                    arr2[m] = arr2[n];
-                    arr2[n] = swap;
-                }
-            }
-        }
-        string result2 = new string(arr2);
-        Console.WriteLine(result2);
-
-        if(result1 == result2)
-        {
-            Console.WriteLine("It is anagram");
-        }
-        else
-        {
-            Console.WriteLine("It is not anagram");
-        }
-
-
+        Console.WriteLine(result);
     }
 }
 
