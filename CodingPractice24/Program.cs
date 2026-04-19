@@ -665,17 +665,40 @@ class Program
 
         //find longest word in sentence
 
-        Console.WriteLine("Enter a sentence");
+        //Console.WriteLine("Enter a sentence");
+        //string str = Console.ReadLine();
+
+        //string[] words = str.Split(' ');
+
+        //string longestword = "";
+
+        //foreach (string word in words)
+        //{
+        //    if (word.Length > longestword.Length)
+        //    {
+        //        longestword = word;
+        //    }
+        //}
+        //Console.WriteLine(longestword);
+
+        //find longestword in sentence using boolean
+
+        Console.WriteLine("Entaer  a sentence");
         string str = Console.ReadLine();
 
         string[] words = str.Split(' ');
-
         string longestword = "";
+        bool firstword = true;
 
-        foreach (string word in words)
+        foreach(string word in words)
         {
-            if (word.Length > longestword.Length)
+            if(firstword == true)
             {
+                longestword = word;
+                firstword = false;
+            }
+            else if (word.Length>longestword.Length)
+                    {
                 longestword = word;
             }
         }
