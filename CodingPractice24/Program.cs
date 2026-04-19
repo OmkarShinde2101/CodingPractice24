@@ -632,19 +632,38 @@ class Program
 
         //remove space from the strig without using inbuild function
 
+        //Console.WriteLine("Enter a string");
+        //string str = Console.ReadLine();
+        //string result = "";
+
+        //for(int i= 0; i<str.Length; i++)
+        //{
+        //    if (str[i] != ' ')
+        //    {
+        //        result = result + str[i];
+        //    }
+        //}
+
+        //Console.WriteLine(result);
+
+        //remove space from string using boolean
+
         Console.WriteLine("Enter a string");
         string str = Console.ReadLine();
         string result = "";
 
-        for(int i= 0; i<str.Length; i++)
+        for(int i=0; i<str.Length;  i++)
         {
-            if (str[i] != ' ')
+            bool isSpace = (str[i] == ' ');
+
+            if (isSpace == false)
             {
                 result = result + str[i];
             }
         }
 
         Console.WriteLine(result);
+
     }
 }
 
