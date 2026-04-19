@@ -535,28 +535,51 @@ class Program
 
         //remove duplicate character from string
 
-        Console.WriteLine("Ennter a string");
-        string str = Console.ReadLine();
+        //Console.WriteLine("Ennter a string");
+        //string str = Console.ReadLine();
 
-        string result = "";
+        //string result = "";
 
-        for (int i = 0; i < str.Length; i++)
+        //for (int i = 0; i < str.Length; i++)
+        //{
+        //    int count = 0;
+
+        //    for (int j = 0; j < result.Length; j++)
+        //    {
+        //        if (str[i] == result[j])
+        //        {
+        //            count++;
+        //        }
+        //    }
+        //    if (count == 0)
+        //    {
+        //        result += str[i];
+        //    }
+        //}
+        //Console.WriteLine(result);
+
+        //sort the array wiout using sort
+
+        Console.WriteLine("Enter a string:");
+        string input = Console.ReadLine();
+
+        char[] arr = input.ToCharArray();
+
+        for (int i = 0; i < arr.Length; i++)
         {
-            int count = 0;
-
-            for (int j = 0; j < result.Length; j++)
+            for (int j = i + 1; j < arr.Length; j++)
             {
-                if (str[i] == result[j])
+                if (arr[i] > arr[j])  
                 {
-                    count++;
+                    char temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
                 }
             }
-            if (count == 0)
-            {
-                result += str[i];
-            }
         }
-        Console.WriteLine(result);
+
+        string result = new string(arr);
+        Console.WriteLine("Sorted string: " + result);
     }
 }
 
