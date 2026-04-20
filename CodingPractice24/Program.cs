@@ -803,24 +803,34 @@ class Program
 
         //sort array without using sort
 
-        Console.WriteLine("Enter a numbers");
+        //Console.WriteLine("Enter a numbers");
+        //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        //for(int i=0; i<arr.Length; i++)
+        //{
+        //    for(int j=i+1; j<arr.Length; j++)
+        //    {
+        //        if (arr[i]> arr[j])
+        //        {
+        //            int swap = arr[i];
+        //            arr[i] = arr[j];
+        //            arr[j] = swap;
+        //        }
+        //    }
+        //}
+        //foreach(int num in arr)
+        //{
+        //    Console.WriteLine(num);
+        //}
+
+        //reverse the array numbers
+
+        Console.WriteLine("Enter a Numbers");
         int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-        for(int i=0; i<arr.Length; i++)
+        for(int i=arr.Length-1; i>=0; i--)
         {
-            for(int j=i+1; j<arr.Length; j++)
-            {
-                if (arr[i]> arr[j])
-                {
-                    int swap = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = swap;
-                }
-            }
-        }
-        foreach(int num in arr)
-        {
-            Console.WriteLine(num);
+            Console.WriteLine(arr[i]);
         }
 
     }
