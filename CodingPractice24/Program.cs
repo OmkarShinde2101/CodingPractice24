@@ -763,17 +763,65 @@ class Program
 
         //reverse the array without using inbuild function
 
-        Console.WriteLine("Enter a Number");
+        //Console.WriteLine("Enter a Number");
+        //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        //for(int i=arr.Length-1; i>=0; i--)
+        //{
+        //    Console.WriteLine(arr[i]);
+        //}
+
+        //remove duplicate elements from array
+
+        //Console.WriteLine("Enter elements");
+        //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        //// Step 1: Sort manually
+        //for (int i = 0; i < arr.Length; i++)
+        //{
+        //    for (int j = i + 1; j < arr.Length; j++)
+        //    {
+        //        if (arr[i] > arr[j])
+        //        {
+        //            int temp = arr[i];
+        //            arr[i] = arr[j];
+        //            arr[j] = temp;
+        //        }
+        //    }
+        //}
+
+        //// Step 2: Print unique elements
+        //Console.WriteLine(arr[0]);
+
+        //for (int i = 1; i < arr.Length; i++)
+        //{
+        //    if (arr[i] != arr[i - 1])
+        //    {
+        //        Console.WriteLine(arr[i]);
+        //    }
+        //}
+
+        //sort array without using sort
+
+        Console.WriteLine("Enter a numbers");
         int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-       
-
-        for(int i=arr.Length-1; i>=0; i--)
+        for(int i=0; i<arr.Length; i++)
         {
-            Console.WriteLine(arr[i]);
+            for(int j=i+1; j<arr.Length; j++)
+            {
+                if (arr[i]> arr[j])
+                {
+                    int swap = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = swap;
+                }
+            }
         }
-
-       
+        foreach(int num in arr)
+        {
+            Console.WriteLine(num);
+        }
 
     }
 }
