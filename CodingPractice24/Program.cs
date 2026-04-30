@@ -1032,31 +1032,68 @@ class Program
 
         //remove the duplicate numbers
 
-        Console.WriteLine("Enter a Numbers");
+        //Console.WriteLine("Enter a Numbers");
+        //string str = Console.ReadLine();
+
+        //string result = "";
+
+        //for(int i=0; i<str.Length; i++)
+        //{
+        //    int count = 0;
+        //    for(int j=0; j<result.Length; j++)
+        //    {
+        //        if (str[i] == str[j])
+        //        {
+        //            count++;
+        //            break;
+        //        }    
+        //    }
+        //    if(count==0)
+        //    {
+        //        result += str[i];
+        //    }
+        //}
+        //Console.WriteLine(result);
+
+        //remove duplicate numbers when it is separted
+
+         Console.WriteLine("Enter a numbers");
         string str = Console.ReadLine();
 
+        string seen = "";
         string result = "";
 
-        for(int i=0; i<str.Length; i++)
+        for (int i = 0; i < str.Length; i++)
         {
-            int count = 0;
-            for(int j=0; j<result.Length; j++)
+            if (str[i] == ' ')
             {
-                if (str[i] == str[j])
+                result += " ";
+                continue;
+            }
+
+            int count = 0;
+
+            for (int j = 0; j < seen.Length; j++)
+            {
+                if (str[i] == seen[j])
                 {
                     count++;
                     break;
-                }    
+                }
             }
-            if(count==0)
+
+            if (count == 0)
             {
                 result += str[i];
+                seen += str[i];
             }
         }
+
         Console.WriteLine(result);
+
     }
 
-    
+
 }
 
 
