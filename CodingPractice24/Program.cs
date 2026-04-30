@@ -922,25 +922,141 @@ class Program
 
         //reverse the numbers but keep it in same position
 
+        //Console.WriteLine("Enter a Numbers");
+        //string[] str = Console.ReadLine().Split(' ');
+
+        //string reversed = "";
+
+        //foreach(string st in str)
+        //{
+        //    string rev = "";
+
+        //    for(int i=st.Length-1; i>=0; i--)
+        //    {
+        //        rev += st[i];
+        //    }
+        //    reversed += rev + " ";
+        //}
+        //Console.WriteLine(reversed);
+
+        //remove duplicate character from sentence using loop keep it in there same position 
+
+        //Console.WriteLine("Enter a string");
+        //string str = Console.ReadLine();
+
+
+        //    string result = "";
+
+        //    for (int i = 0; i < str.Length; i++)
+        //    {
+        //        int count = 0;
+        //        for (int j = 0; j < i; j++)
+        //        {
+        //            if (str[i] == result[j])
+        //            {
+        //                count++;
+        //            break;
+        //            }
+        //        }
+
+        //        if (count == 0)
+        //        {
+        //            result += str[i] ;
+        //        }
+        //    }
+        //    Console.WriteLine(result);
+
+
+
+        //Console.WriteLine("Enter a string");
+        //string str = Console.ReadLine();
+
+        //string result = "";
+
+        //for (int i = 0; i < str.Length; i++)
+        //{
+        //    int count = 0;
+
+        //    for (int j = 0; j < i; j++)   
+        //    {
+        //        if (str[i] == str[j])
+        //        {
+        //            count++;
+        //            break;
+        //        }
+        //    }
+
+        //    if (count == 0)
+        //    {
+        //        result += str[i];   // keep first occurrence only
+        //    }
+        //}
+
+        //Console.WriteLine(result);
+
+        // remove duplicate character from sentence using loop keep it in there same position 
+
+        //Console.WriteLine("Enter a string");
+        //string str = Console.ReadLine();
+
+        //string seen = "";
+        //string result = "";
+
+        //for (int i = 0; i < str.Length; i++)
+        //{
+        //    if (str[i] == ' ')
+        //    {
+        //        result += " ";   
+        //        continue;
+        //    }
+
+        //    int count = 0;
+
+        //    for (int j = 0; j < seen.Length; j++)
+        //    {
+        //        if (str[i] == seen[j])
+        //        {
+        //            count++;
+        //            break;
+        //        }
+        //    }
+
+        //    if (count == 0)
+        //    {
+        //        result += str[i];
+        //        seen += str[i];
+        //    }
+        //}
+
+        //Console.WriteLine(result);
+
+        //remove the duplicate numbers
+
         Console.WriteLine("Enter a Numbers");
-        string[] str = Console.ReadLine().Split(' ');
+        string str = Console.ReadLine();
 
-        string reversed = "";
+        string result = "";
 
-        foreach(string st in str)
+        for(int i=0; i<str.Length; i++)
         {
-            string rev = "";
-
-            for(int i=st.Length-1; i>=0; i--)
+            int count = 0;
+            for(int j=0; j<result.Length; j++)
             {
-                rev += st[i];
+                if (str[i] == str[j])
+                {
+                    count++;
+                    break;
+                }    
             }
-            reversed += rev + " ";
+            if(count==0)
+            {
+                result += str[i];
+            }
         }
-        Console.WriteLine(reversed);
-
-        
+        Console.WriteLine(result);
     }
+
+    
 }
 
 
