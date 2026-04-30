@@ -909,18 +909,35 @@ class Program
 
         //reverse the position of numbers
 
-        Console.WriteLine("Enter a Number");
+        //Console.WriteLine("Enter a Number");
+        //string[] str = Console.ReadLine().Split(' ');
+
+        //string reversed = "";
+
+        //for(int i=str.Length-1; i>=0; i--)
+        //{
+        //    reversed += str[i] + " ";
+        //}
+        //Console.WriteLine(reversed);
+
+        //reverse the numbers but keep it in same position
+
+        Console.WriteLine("Enter a Numbers");
         string[] str = Console.ReadLine().Split(' ');
 
         string reversed = "";
 
-        for(int i=str.Length-1; i>=0; i--)
+        foreach(string st in str)
         {
-            reversed += str[i] + " ";
+            string rev = "";
+
+            for(int i=st.Length-1; i>=0; i--)
+            {
+                rev += st[i];
+            }
+            reversed += rev + " ";
         }
-
         Console.WriteLine(reversed);
-
 
         
     }
