@@ -1057,38 +1057,78 @@ class Program
 
         //remove duplicate numbers when it is separted
 
-         Console.WriteLine("Enter a numbers");
-        string str = Console.ReadLine();
+        // Console.WriteLine("Enter a numbers");
+        //string str = Console.ReadLine();
 
-        string seen = "";
-        string result = "";
+        //string seen = "";
+        //string result = "";
 
-        for (int i = 0; i < str.Length; i++)
+        //for (int i = 0; i < str.Length; i++)
+        //{
+        //    if (str[i] == ' ')
+        //    {
+        //        result += " ";
+        //        continue;
+        //    }
+
+        //    int count = 0;
+
+        //    for (int j = 0; j < seen.Length; j++)
+        //    {
+        //        if (str[i] == seen[j])
+        //        {
+        //            count++;
+        //            break;
+        //        }
+        //    }
+
+        //    if (count == 0)
+        //    {
+        //        result += str[i];
+        //        seen += str[i];
+        //    }
+        //}
+
+        //Console.WriteLine(result);
+
+        //sort the array without using sort using loop only 
+
+        //Console.WriteLine("Enter a numbers");
+        //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        //for(int i=0; i<arr.Length; i++)
+        //{
+        //    for(int j=i+1; j<arr.Length; j++)
+        //    {
+        //        if (arr[i] > arr[j])
+        //        {
+        //            int swap = arr[i];
+        //            arr[i] = arr[j];
+        //            arr[j] = swap;
+        //        }
+        //    }
+        //    Console.Write(arr[i] + " ");
+        //}
+
+        //sort the string output keep it in alphabetical order
+
+        Console.WriteLine("Enter a string");
+        char[] arr = Console.ReadLine().ToCharArray();
+
+        for (int i = 0; i < arr.Length; i++)
         {
-            if (str[i] == ' ')
+            for (int j = i + 1; j < arr.Length; j++)
             {
-                result += " ";
-                continue;
-            }
-
-            int count = 0;
-
-            for (int j = 0; j < seen.Length; j++)
-            {
-                if (str[i] == seen[j])
+                if (arr[i] > arr[j])
                 {
-                    count++;
-                    break;
+                    char temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
                 }
-            }
-
-            if (count == 0)
-            {
-                result += str[i];
-                seen += str[i];
             }
         }
 
+        string result = new string(arr);
         Console.WriteLine(result);
 
     }
