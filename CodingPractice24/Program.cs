@@ -825,14 +825,104 @@ class Program
 
         //reverse the array numbers
 
-        Console.WriteLine("Enter a Numbers");
-        int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+        //Console.WriteLine("Enter a Numbers");
+        //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-        for(int i=arr.Length-1; i>=0; i--)
+        //for(int i=arr.Length-1; i>=0; i--)
+        //{
+        //    Console.WriteLine(arr[i]);
+        //}
+
+        //revese the array numbers when they are in same position
+
+        //Console.WriteLine("Enter numbers:");
+        //string[] arr = Console.ReadLine().Split(' ');
+
+        //foreach (string num in arr)
+        //{
+        //    string rev = "";
+
+        //    for (int i = num.Length - 1; i >= 0; i--)
+        //    {
+        //        rev += num[i];
+        //    }
+        //    Console.Write(rev + " ");
+        //}
+
+        //reverse the string using loop
+
+        //Console.WriteLine("Enter a string");
+        //string str = Console.ReadLine();
+
+        //string reversed = "";
+
+        //for(int i = str.Length-1; i>=0; i--)
+        //{
+        //    reversed += str[i];
+        //}
+        //Console.WriteLine(reversed);
+
+        //reverse the order of word in given  sentence using loop 
+
+        //Console.WriteLine("Enter a sentence");
+        //string[] str = Console.ReadLine().Split(' ');
+
+        //string reversed = "";
+
+        //for(int i=str.Length-1; i>=0; i--)
+        //{
+        //    reversed += str[i] + " ";
+        //}
+        //Console.WriteLine(reversed);
+
+        //reverse the word in sentence but keep in there same position using loop
+
+        //Console.WriteLine("Enter a sentence");
+        //string[] str = Console.ReadLine().Split(' ');
+
+        //string rev = "";
+
+        //foreach (string st in str)
+        //{
+        //    string reversed = "";
+
+        //    for (int i = st.Length - 1; i >= 0; i--)
+        //    {
+        //        reversed += st[i];
+        //    }
+        //    rev += reversed + " ";
+        //}
+        //Console.WriteLine(rev);
+
+        //reverse the single number
+
+        //Console.WriteLine("Enter a Number");
+        //string str = Console.ReadLine();
+
+        //string reversed = "";
+
+        //for(int i=str.Length-1; i>=0; i--)
+        //{
+        //    reversed += str[i];
+        //}
+        //Console.WriteLine(reversed);
+
+        //reverse the position of numbers
+
+        Console.WriteLine("Enter a Number");
+        string[] str = Console.ReadLine().Split(' ');
+
+        string reversed = "";
+
+        for(int i=str.Length-1; i>=0; i--)
         {
-            Console.WriteLine(arr[i]);
+            reversed += str[i] + " ";
         }
 
+        Console.WriteLine(reversed);
+
+
+        
     }
 }
 
