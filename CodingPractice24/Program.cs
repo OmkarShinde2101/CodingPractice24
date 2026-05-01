@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Threading.Channels;
+using System.Transactions;
 using System.Xml.Linq;
 
 class Program
@@ -1174,28 +1175,62 @@ class Program
 
         //find largest and smallest number in array
 
+        //Console.WriteLine("Enter a Number");
+        //int[] num = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        //int smallest = 0;
+        //int largest = 0;
+
+        //for(int i=0; i<num.Length; i++)
+        //{
+        //    for(int j=i+1; j<num.Length; j++)
+        //    {
+        //        if(num[i]>num[j])
+        //        {
+        //            int swap = num[i];
+        //            num[i] = num[j];
+        //            num[j] = swap;
+        //        }
+        //    }           
+        //}
+
+        //largest = num[num.Length - 1];
+        //smallest = num[0];
+
+        //Console.WriteLine(smallest);
+        //Console.WriteLine(largest);
+
+        //Find Largest and smallest number by using boolean
+
         Console.WriteLine("Enter a Number");
-        int[] num = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+        int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
         int smallest = 0;
         int largest = 0;
 
-        for(int i=0; i<num.Length; i++)
+        bool first = true;
+
+        foreach(int num in arr)
         {
-            for(int j=i+1; j<num.Length; j++)
+            if(first==true)
             {
-                if(num[i]>num[j])
+                smallest = num;
+                largest = num;
+                first = false;
+
+            }
+            else
+            {
+                if(num<smallest)
                 {
-                    int swap = num[i];
-                    num[i] = num[j];
-                    num[j] = swap;
+                    smallest = num;
                 }
-            }           
+                if(num>largest)
+                {
+                    largest = num;
+                }
+            }
         }
-
-        largest = num[num.Length - 1];
-        smallest = num[0];
-
         Console.WriteLine(smallest);
         Console.WriteLine(largest);
     }
