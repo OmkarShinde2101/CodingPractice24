@@ -1433,38 +1433,63 @@ class Program
 
         //Count word frequency in a sentence
 
-        Console.WriteLine("Enter a sentence");
-        string[] str = Console.ReadLine().Split(' ');
+        //Console.WriteLine("Enter a sentence");
+        //string[] str = Console.ReadLine().Split(' ');
 
-        for (int i = 0; i < str.Length; i++)
+        //for (int i = 0; i < str.Length; i++)
+        //{
+        //    int count = 1;
+
+        //    // check if already counted before
+        //    bool alreadyCounted = false;
+        //    for (int k = 0; k < i; k++)
+        //    {
+        //        if (str[i] == str[k])
+        //        {
+        //            alreadyCounted = true;
+        //            break;
+        //        }
+        //    }
+
+        //    if (alreadyCounted)
+        //        continue;
+
+        //    // count occurrences
+        //    for (int j = i + 1; j < str.Length; j++)
+        //    {
+        //        if (str[i] == str[j])
+        //        {
+        //            count++;
+        //        }
+        //    }
+
+        //    Console.WriteLine(str[i] + " = " + count);
+        //}
+
+        //find first non repeating charcater
+
+        Console.WriteLine("Enter a string");
+        string str = Console.ReadLine();
+
+        for(int i=0; i<str.Length; i++)
         {
-            int count = 1;
+            bool isrepeating = false;
 
-            // check if already counted before
-            bool alreadyCounted = false;
-            for (int k = 0; k < i; k++)
+            for (int j = i; j < str.Length; j++)
             {
-                if (str[i] == str[k])
+                if (i != j && str[i] == str[j])
                 {
-                    alreadyCounted = true;
+                    isrepeating = true;
                     break;
                 }
             }
-
-            if (alreadyCounted)
-                continue;
-
-            // count occurrences
-            for (int j = i + 1; j < str.Length; j++)
-            {
-                if (str[i] == str[j])
+                if(!isrepeating)
                 {
-                    count++;
+                    Console.WriteLine(str[i]);
+                break;
                 }
             }
-
-            Console.WriteLine(str[i] + " = " + count);
-        }
+        
        
 
 
