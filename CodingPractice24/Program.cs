@@ -1285,26 +1285,118 @@ class Program
 
         //Find longest word in sentence using boolean
 
-        Console.WriteLine("Enter a sentence");
-        string[] arr = Console.ReadLine().Split(' ').ToArray();
+        //Console.WriteLine("Enter a sentence");
+        //string[] arr = Console.ReadLine().Split(' ').ToArray();
 
-        string longestword = arr[0];
+        //string longestword = arr[0];
 
-        bool firstword = true;
+        //bool firstword = true;
 
-        foreach(string str in arr)
+        //foreach(string str in arr)
+        //{
+        //    if (firstword == true)
+        //    {
+        //        longestword = str;
+        //        firstword = false;
+        //    }
+        //    else if (str.Length > longestword.Length)
+        //    {
+        //        longestword = str;
+        //    }
+        //}
+        //Console.WriteLine(longestword);
+
+        //Remove space from string and also from sentence  using loop only without using inbuild functions
+
+        //Console.WriteLine("Enter a string");
+        //string str = Console.ReadLine();
+
+        //string result = "";
+
+        //for(int i=0; i<str.Length; i++)
+        //{
+        //    if (str[i] != ' ')
+        //    {
+        //        result = result + str[i];
+        //    }
+        //}
+
+        //Console.WriteLine(result);
+
+        //Remove space from string using boolean
+
+        //Console.WriteLine("Enter a string");
+        //string str = Console.ReadLine();
+
+        //string result = "";
+
+        //for(int i=0; i<str.Length; i++)
+        //{
+        //    bool isSpace = (str[i] == ' ');
+
+        //    if (isSpace == false)
+        //    {
+        //        result += str[i];
+        //    }
+        //}
+
+        //Console.WriteLine(result);
+
+        //count true and false both
+
+        //bool[] arr = { true, false, true, true, true, false, false };
+
+        //int count1 = 0;
+        //int count2 = 0;
+
+        //for(int i=0; i<arr.Length; i++)
+        //{
+        //    if (arr[i] == true)
+        //    {
+        //        count1++;
+        //    }
+        //    else
+        //    {
+        //        count2++;
+        //    }
+        //}
+        //Console.WriteLine(count1);
+        //Console.WriteLine(count2);
+
+        //swap the position of array first and last
+
+        //int[] arr = { 99, 234, 67, 143 };
+
+        //int i = 0;
+        //int j = arr.Length - 1;
+
+        //int temp = arr[i];
+        //arr[i] = arr[j];
+        //arr[j] = temp;
+
+        //foreach (int num in arr)
+        //{
+        //    Console.WriteLine(num);
+        //}
+
+        //find frequency of each number in array
+
+        int[] arr = { 11, 33, 67, 12, 34, 34, 34, 56, 11, 33 };
+
+        int result = 0;
+        int count = 0;
+
+        for(int i=0; i<arr.Length; i++)
         {
-            if (firstword == true)
+            for(int j=i+1; j<arr.Length; j++)
             {
-                longestword = str;
-                firstword = false;
-            }
-            else if (str.Length > longestword.Length)
-            {
-                longestword = str;
+                if (arr[i] == arr[j])
+                {
+                    count++;
+                }
             }
         }
-        Console.WriteLine(longestword);
+        Console.WriteLine(count);
     }
 
 
