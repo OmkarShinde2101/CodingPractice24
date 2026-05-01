@@ -1415,22 +1415,57 @@ class Program
 
         //prime numbers upto 100
 
-        for (int n = 2; n <= 100; n++)
+        //for (int n = 2; n <= 100; n++)
+        //{
+        //    int num = 0;
+        //    for (int i = 1; i <= n; i++)
+        //    {
+        //        if (n % i == 0)
+        //        {
+        //            num++;
+        //        }
+        //    }
+        //    if (num == 2)
+        //    {
+        //        Console.WriteLine(n + " ");
+        //    }
+        //}
+
+        //Count word frequency in a sentence
+
+        Console.WriteLine("Enter a sentence");
+        string[] str = Console.ReadLine().Split(' ');
+
+        for (int i = 0; i < str.Length; i++)
         {
-            int num = 0;
-            for (int i = 1; i <= n; i++)
+            int count = 1;
+
+            // check if already counted before
+            bool alreadyCounted = false;
+            for (int k = 0; k < i; k++)
             {
-                if (n % i == 0)
+                if (str[i] == str[k])
                 {
-                    num++;
+                    alreadyCounted = true;
+                    break;
                 }
             }
-            if (num == 2)
-            {
-                Console.WriteLine(n + " ");
-            }
-        }
 
+            if (alreadyCounted)
+                continue;
+
+            // count occurrences
+            for (int j = i + 1; j < str.Length; j++)
+            {
+                if (str[i] == str[j])
+                {
+                    count++;
+                }
+            }
+
+            Console.WriteLine(str[i] + " = " + count);
+        }
+       
 
 
 
