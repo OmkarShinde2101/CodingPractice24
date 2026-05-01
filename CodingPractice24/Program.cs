@@ -1202,37 +1202,109 @@ class Program
 
         //Find Largest and smallest number by using boolean
 
-        Console.WriteLine("Enter a Number");
-        int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+        //Console.WriteLine("Enter a Number");
+        //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-        int smallest = 0;
-        int largest = 0;
+        //int smallest = 0;
+        //int largest = 0;
 
-        bool first = true;
+        //bool first = true;
 
-        foreach(int num in arr)
+        //foreach(int num in arr)
+        //{
+        //    if(first==true)
+        //    {
+        //        smallest = num;
+        //        largest = num;
+        //        first = false;
+
+        //    }
+        //    else
+        //    {
+        //        if(num<smallest)
+        //        {
+        //            smallest = num;
+        //        }
+        //        if(num>largest)
+        //        {
+        //            largest = num;
+        //        }
+        //    }
+        //}
+        //Console.WriteLine(smallest);
+        //Console.WriteLine(largest);
+
+        //find largest and smallest using linq
+
+
+        //Console.WriteLine("Enter numbers");
+        //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        //int smallest = arr.Min();
+        //int largest = arr.Max();
+
+        //Console.WriteLine("Smallest: " + smallest);
+        //Console.WriteLine("Largest: " + largest);
+
+        //find largest and smallest number in array
+
+        //Console.WriteLine("Enter numbers");
+        //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        //int smallest = arr[0];
+        //int largest = arr[0];
+
+        //foreach (int num in arr)
+        //{
+        //    if (num < smallest)
+        //        smallest = num;
+
+        //    if (num > largest)
+        //        largest = num;
+        //}
+
+        //Console.WriteLine("Smallest: " + smallest);
+        //Console.WriteLine("Largest: " + largest);
+
+        //Find Longest word in sentence
+
+        //Console.WriteLine("Enter a sentence");
+        //string[] arr = Console.ReadLine().Split(' ').ToArray();
+
+        //string longestword = arr[0];
+
+        //foreach(string str in arr)
+        //{
+        //    if(str.Length > longestword.Length)
+        //    {
+        //        longestword = str;
+        //    }
+        //}
+
+        //Console.WriteLine(longestword);
+
+        //Find longest word in sentence using boolean
+
+        Console.WriteLine("Enter a sentence");
+        string[] arr = Console.ReadLine().Split(' ').ToArray();
+
+        string longestword = arr[0];
+
+        bool firstword = true;
+
+        foreach(string str in arr)
         {
-            if(first==true)
+            if (firstword == true)
             {
-                smallest = num;
-                largest = num;
-                first = false;
-
+                longestword = str;
+                firstword = false;
             }
-            else
+            else if (str.Length > longestword.Length)
             {
-                if(num<smallest)
-                {
-                    smallest = num;
-                }
-                if(num>largest)
-                {
-                    largest = num;
-                }
+                longestword = str;
             }
         }
-        Console.WriteLine(smallest);
-        Console.WriteLine(largest);
+        Console.WriteLine(longestword);
     }
 
 
