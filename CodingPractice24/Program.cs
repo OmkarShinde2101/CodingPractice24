@@ -828,9 +828,9 @@ class Program
         //Console.WriteLine("Enter a Numbers");
         //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-        //for(int i=arr.Length-1; i>=0; i--)
+        //for (int i = arr.Length - 1; i >= 0; i--)
         //{
-        //    Console.WriteLine(arr[i]);
+        //    Console.Write(arr[i] + " ");
         //}
 
         //revese the array numbers when they are in same position
@@ -856,7 +856,7 @@ class Program
 
         //string reversed = "";
 
-        //for(int i = str.Length-1; i>=0; i--)
+        //for (int i = str.Length - 1; i >= 0; i--)
         //{
         //    reversed += str[i];
         //}
@@ -869,7 +869,7 @@ class Program
 
         //string reversed = "";
 
-        //for(int i=str.Length-1; i>=0; i--)
+        //for (int i = str.Length - 1; i >= 0; i--)
         //{
         //    reversed += str[i] + " ";
         //}
@@ -901,7 +901,7 @@ class Program
 
         //string reversed = "";
 
-        //for(int i=str.Length-1; i>=0; i--)
+        //for (int i = str.Length - 1; i >= 0; i--)
         //{
         //    reversed += str[i];
         //}
@@ -914,7 +914,7 @@ class Program
 
         //string reversed = "";
 
-        //for(int i=str.Length-1; i>=0; i--)
+        //for (int i = str.Length - 1; i >= 0; i--)
         //{
         //    reversed += str[i] + " ";
         //}
@@ -927,11 +927,11 @@ class Program
 
         //string reversed = "";
 
-        //foreach(string st in str)
+        //foreach (string st in str)
         //{
         //    string rev = "";
 
-        //    for(int i=st.Length-1; i>=0; i--)
+        //    for (int i = st.Length - 1; i >= 0; i--)
         //    {
         //        rev += st[i];
         //    }
@@ -1006,7 +1006,7 @@ class Program
         //{
         //    if (str[i] == ' ')
         //    {
-        //        result += " ";   
+        //        result += " ";
         //        continue;
         //    }
 
@@ -1037,18 +1037,18 @@ class Program
 
         //string result = "";
 
-        //for(int i=0; i<str.Length; i++)
+        //for (int i = 0; i < str.Length; i++)
         //{
         //    int count = 0;
-        //    for(int j=0; j<result.Length; j++)
+        //    for (int j = 0; j < result.Length; j++)
         //    {
         //        if (str[i] == str[j])
         //        {
         //            count++;
         //            break;
-        //        }    
+        //        }
         //    }
-        //    if(count==0)
+        //    if (count == 0)
         //    {
         //        result += str[i];
         //    }
@@ -1057,7 +1057,7 @@ class Program
 
         //remove duplicate numbers when it is separted
 
-        // Console.WriteLine("Enter a numbers");
+        //Console.WriteLine("Enter a numbers");
         //string str = Console.ReadLine();
 
         //string seen = "";
@@ -1096,9 +1096,9 @@ class Program
         //Console.WriteLine("Enter a numbers");
         //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-        //for(int i=0; i<arr.Length; i++)
+        //for (int i = 0; i < arr.Length; i++)
         //{
-        //    for(int j=i+1; j<arr.Length; j++)
+        //    for (int j = i + 1; j < arr.Length; j++)
         //    {
         //        if (arr[i] > arr[j])
         //        {
@@ -1112,25 +1112,92 @@ class Program
 
         //sort the string output keep it in alphabetical order
 
-        Console.WriteLine("Enter a string");
-        char[] arr = Console.ReadLine().ToCharArray();
+        //Console.WriteLine("Enter a string");
+        //char[] arr = Console.ReadLine().ToCharArray();
 
-        for (int i = 0; i < arr.Length; i++)
+        //for (int i = 0; i < arr.Length; i++)
+        //{
+        //    for (int j = i + 1; j < arr.Length; j++)
+        //    {
+        //        if (arr[i] > arr[j])
+        //        {
+        //            char temp = arr[i];
+        //            arr[i] = arr[j];
+        //            arr[j] = temp;
+        //        }
+        //    }
+        //}
+
+        //string result = new string(arr);
+        //Console.WriteLine(result);
+
+        //Count the no of vowels in a string
+
+        //Console.WriteLine("Enter a string");
+        //string str = Console.ReadLine();
+
+        //int count = 0;
+
+        //string result = "";
+
+        //for (int i = 0; i < str.Length; i++)
+        //{
+        //    char ch = str[i];
+
+        //    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+        //    {
+        //        count++;
+        //    }
+        //}
+        //Console.WriteLine(count);
+
+        //count the no of vowels in string and also print how many times it appears
+
+        //Console.WriteLine("Enter a string");
+        //string str = Console.ReadLine();
+
+        //int a = 0, e = 0, i = 0, o = 0, u = 0;
+
+        //foreach(char ch in str)
+        //{
+        //    if (ch == 'a') a++;
+        //    if (ch == 'e') e++;
+        //    if (ch == 'i') i++;
+        //    if (ch == 'o') o++;
+        //    if (ch == 'u') u++;
+        //}
+        //Console.WriteLine("a = " + a);
+        //Console.WriteLine("e = " + e);
+        //Console.WriteLine("i = " + i);
+        //Console.WriteLine("o = " + o);
+        //Console.WriteLine("u = " + u);
+
+        //find largest and smallest number in array
+
+        Console.WriteLine("Enter a Number");
+        int[] num = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        int smallest = 0;
+        int largest = 0;
+
+        for(int i=0; i<num.Length; i++)
         {
-            for (int j = i + 1; j < arr.Length; j++)
+            for(int j=i+1; j<num.Length; j++)
             {
-                if (arr[i] > arr[j])
+                if(num[i]>num[j])
                 {
-                    char temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
+                    int swap = num[i];
+                    num[i] = num[j];
+                    num[j] = swap;
                 }
-            }
+            }           
         }
 
-        string result = new string(arr);
-        Console.WriteLine(result);
+        largest = num[num.Length - 1];
+        smallest = num[0];
 
+        Console.WriteLine(smallest);
+        Console.WriteLine(largest);
     }
 
 
