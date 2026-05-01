@@ -1381,22 +1381,59 @@ class Program
 
         //find frequency of each number in array
 
-        int[] arr = { 11, 33, 67, 12, 34, 34, 34, 56, 11, 33 };
+        //int[] arr = { 11, 33, 67, 12, 34, 34, 34, 56, 11, 33 };
 
-        int result = 0;
-        int count = 0;
+        //int result = 0;
+        //int count = 0;
 
-        for(int i=0; i<arr.Length; i++)
+        //for(int i=0; i<arr.Length; i++)
+        //{
+        //    for(int j=i+1; j<arr.Length; j++)
+        //    {
+        //        if (arr[i] == arr[j])
+        //        {
+        //            count++;
+        //        }
+        //    }
+        //}
+        //Console.WriteLine(count);
+
+        //int[] arr = { 1, 2, 3, 1, 2, 1, 4 };
+        //List<int> counted = new List<int>();
+        //foreach (int num in arr)
+        //{
+        //    if (!counted.Contains(num))
+        //    {
+        //        int count = 0;
+        //        foreach (int n in arr)
+        //            if (n == num)
+        //                count++;
+        //        Console.WriteLine($"{num} = {count} times");
+        //        counted.Add(num);
+        //    }
+        //}
+
+        //prime numbers upto 100
+
+        for (int n = 2; n <= 100; n++)
         {
-            for(int j=i+1; j<arr.Length; j++)
+            int num = 0;
+            for (int i = 1; i <= n; i++)
             {
-                if (arr[i] == arr[j])
+                if (n % i == 0)
                 {
-                    count++;
+                    num++;
                 }
             }
+            if (num == 2)
+            {
+                Console.WriteLine(n + " ");
+            }
         }
-        Console.WriteLine(count);
+
+
+
+
     }
 
 
