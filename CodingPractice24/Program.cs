@@ -1468,36 +1468,441 @@ class Program
 
         //find first non repeating charcater
 
-        Console.WriteLine("Enter a string");
-        string str = Console.ReadLine();
+        //Console.WriteLine("Enter a string");
+        //string str = Console.ReadLine();
 
-        for(int i=0; i<str.Length; i++)
+        //for(int i=0; i<str.Length; i++)
+        //{
+        //    bool isrepeating = false;
+
+        //    for (int j = i; j < str.Length; j++)
+        //    {
+        //        if (i != j && str[i] == str[j])
+        //        {
+        //            isrepeating = true;
+        //            break;
+        //        }
+        //    }
+        //        if(!isrepeating)
+        //        {
+        //            Console.WriteLine(str[i]);
+        //        break;
+        //        }
+        //    }
+
+        //check the anagram
+
+        //    Console.WriteLine("Enter first string:");
+        //    string str1 = Console.ReadLine();
+
+        //    Console.WriteLine("Enter second string:");
+        //    string str2 = Console.ReadLine();
+
+        //    // Step 1: check length
+        //    if (str1.Length != str2.Length)
+        //    {
+        //        Console.WriteLine("Not Anagram");
+        //        return;
+        //    }
+
+        //    bool isAnagram = true;
+
+        //    // Step 2: check each character
+        //    for (int i = 0; i < str1.Length; i++)
+        //    {
+        //        int count1 = 0;
+        //        int count2 = 0;
+
+        //        // count in first string
+        //        for (int j = 0; j < str1.Length; j++)
+        //        {
+        //            if (str1[i] == str1[j])
+        //            {
+        //                count1++;
+        //            }
+        //        }
+
+        //        // count in second string
+        //        for (int j = 0; j < str2.Length; j++)
+        //        {
+        //            if (str1[i] == str2[j])
+        //            {
+        //                count2++;
+        //            }
+        //        }
+
+        //        if (count1 != count2)
+        //        {
+        //            isAnagram = false;
+        //            break;
+        //        }
+        //    }
+
+        //if (isAnagram)
+        //{
+        //    Console.WriteLine("Anagram");
+        //}
+        //else
+        //{
+        //    Console.WriteLine("Not Anagram");
+        //}
+
+        //count the consonant and frequency
+
+        //Console.WriteLine("Enter a string:");
+        //string str = Console.ReadLine();
+
+        //for (int i = 0; i < str.Length; i++)
+        //{
+        //    char ch = str[i];
+
+        //    // check if alphabet
+
+        //    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+        //    {
+        //        // check if NOT vowel (i.e., consonant)
+
+        //        if (ch != 'a' && ch != 'e' && ch != 'i' && ch != 'o' && ch != 'u' &&
+        //            ch != 'A' && ch != 'E' && ch != 'I' && ch != 'O' && ch != 'U')
+        //        {
+        //            int count = 1;
+
+        //            // check if already counted
+
+        //            bool alreadyCounted = false;
+        //            for (int k = 0; k < i; k++)
+        //            {
+        //                if (str[k] == ch)
+        //                {
+        //                    alreadyCounted = true;
+        //                    break;
+        //                }
+        //            }
+
+        //            if (alreadyCounted)
+        //                continue;
+
+        //            // count occurrences
+        //            for (int j = i + 1; j < str.Length; j++)
+        //            {
+        //                if (str[j] == ch)
+        //                {
+        //                    count++;
+        //                }
+        //            }
+
+        //            Console.WriteLine(ch + " = " + count);
+        //        }
+        //    }
+        //}
+
+        //count occurence of zero
+
+        //Console.WriteLine("Enter a Number");
+        //int[] num = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        //int count = 0;
+
+        //foreach (int number in num)
+        //{
+        //    if (number == 0)
+        //    {
+        //        count++;
+
+        //    }
+
+        //}
+
+        //Console.WriteLine(count);
+
+        //move all zeroes to end 
+
+        //int[] arr = { 0, 1, 0, 3, 12 };
+
+        //Console.WriteLine("Enter numbers:");
+        //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        //int index = 0;
+
+        //// Step 1: move non-zero elements
+        //for (int i = 0; i < arr.Length; i++)
+        //{
+        //    if (arr[i] != 0)
+        //    {
+        //        arr[index] = arr[i];
+        //        index++;
+        //    }
+        //}
+
+        //// Step 2: fill remaining with zeroes
+        //for (int i = index; i < arr.Length; i++)
+        //{
+        //    arr[i] = 0;
+        //}
+
+
+        //Console.WriteLine("Result:");
+        //foreach (int num in arr)
+        //{
+        //    Console.Write(num + " ");
+        //}
+
+        //find missing number in array
+
+        //Console.WriteLine("Enter numbers:");
+        //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        //int n = arr.Length + 1; 
+
+        //int expectedSum = n * (n + 1) / 2;
+
+        //int actualSum = 0;
+
+        //for (int i = 0; i < arr.Length; i++)
+        //{
+        //    actualSum += arr[i];
+        //}
+
+        //int missing = expectedSum - actualSum;
+
+        //Console.WriteLine("Missing number: " + missing);
+
+        //count the no of vowels in string and also print how many times it appear
+
+        //Console.WriteLine("Enter a string");
+        //string str = Console.ReadLine();
+
+        //int a = 0, e = 0, i = 0, o = 0, u = 0;
+
+        //foreach(char ch in str)
+        //{
+        //    if (ch == 'a') a++;
+        //    if (ch == 'e') e++;
+        //    if (ch == 'i') i++;
+        //    if (ch == 'o') o++;
+        //    if (ch == 'u') u++;
+        //}
+
+        //Console.WriteLine("a=" + a++);
+        //Console.WriteLine("e=" + e++);
+        //Console.WriteLine("i=" + i++);
+        //Console.WriteLine("o=" + o++);
+        //Console.WriteLine("u=" + u++);
+
+        //Console.WriteLine("Enter a string");
+        //string str = Console.ReadLine();
+
+        //int count = 0;
+
+        //for(int i=0; i<str.Length; i++)
+        //{
+        //    char ch = str[i];
+
+        //    if
+        //        (ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u')
+        //    {
+        //        count++;
+        //    }
+        //}
+
+        //Console.WriteLine(count);
+
+        //reverse the string using loop
+
+        //Console.WriteLine("Enter a string");
+        //string str = Console.ReadLine();
+
+        //string reversed = "";
+
+        //for (int i = str.Length - 1; i >= 0; i--)
+        //{
+        //    reversed += str[i];
+        //}
+        //Console.WriteLine(reversed);
+
+        //reverse the order of word in given  sentence using loop
+
+        //Console.WriteLine("Enter a sentence");
+        //string[] arr = Console.ReadLine().Split(' ').ToArray();
+
+        //string reversed = "";
+
+        //for (int i = arr.Length - 1; i >= 0; i--)
+        //{
+        //    reversed += arr[i] + " ";
+        //}
+
+        //Console.WriteLine(reversed);
+
+        //reverse the word in sentence but keep in there same position using loop
+
+        //Console.WriteLine("Enter a sentence");
+        //string[] arr = Console.ReadLine().Split(' ');
+
+        //string rev = "";
+
+        //foreach(string st in arr)
+        //{
+        //    string reversed = "";
+
+        //    for(int i=st.Length-1; i>=0; i--)
+        //    {
+        //        reversed += st[i];
+        //    }
+        //    rev += reversed + " ";
+        //}
+        //Console.WriteLine(rev);
+
+        //reverse the single number
+
+        //Console.WriteLine("Enter a Number");
+        //string[] str = Console.ReadLine().Split(' ').ToArray();
+
+        //string reversed = "";
+
+        //for (int i = str.Length - 1; i >= 0; i--)
+        //{
+        //    //reversed += str[i];
+        //    Console.WriteLine(str[i] + " ");
+        //}
+
+
+        //reverse the positotn of number
+
+        //Console.WriteLine("Enter a Number");
+        //string[] str = Console.ReadLine().Split(' ');
+
+        //string reversed = "";
+
+        //for(int i=str.Length-1; i>=0; i--)
+        //{
+        //    reversed += str[i] + " ";
+        //}
+
+        //Console.WriteLine(reversed);
+
+        //reverse the position of number but keep it in same position
+
+        //Console.WriteLine("Enter a Number");
+        //string[] str = Console.ReadLine().Split();
+
+        //string reversed = "";
+
+        //foreach(string st in str)
+        //{
+        //    string rev = "";
+
+        //    for(int i=st.Length-1; i>=0; i--)
+        //    {
+        //        rev += st[i] ;
+        //    }
+        //    reversed += rev + " ";
+        //}
+        //Console.WriteLine(reversed);
+
+        //reverse the array numbers 
+
+        //Console.WriteLine("Enter a Number");
+        //int[] num = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        //for(int i=num.Length-1; i>=0; i--)
+        //{
+        //    Console.Write(num[i] + " ");
+        //}
+
+        //remove duplicate character from sentence using loop keep it in there same position 
+
+        //Console.WriteLine("Enter a sentence");
+        //string str = Console.ReadLine();
+
+        //string seen = "";
+        //string result = "";
+
+        //for(int i=0; i<str.Length; i++)
+        //{
+        //    if (str[i] == ' ')
+        //    {
+        //        result += " ";
+        //        continue;
+        //    }
+        //    int count = 0;
+
+        //    for(int j=0; j<seen.Length; j++)
+        //    {
+        //        if (str[i]== seen[j])
+        //        {
+        //            count++;
+        //            break;
+        //        }
+        //    }
+        //    if (count==0)
+        //    {
+        //        result += str[i];
+        //        seen += str[i];
+        //    }
+        //}
+        //Console.WriteLine(result);
+
+        //sort the array without using sort using loop only
+
+        // Console.WriteLine("Enter a number");
+        // int[] num = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        // for (int i = 0; i < num.Length; i++)
+        // {
+        //     for (int j = i + 1; j < num.Length; j++)
+        //     {
+        //         if (num[i] > num[j])
+        //         {
+        //             int swap = num[i];
+        //             num[i] = num[j];
+        //             num[j] = swap;
+        //         }
+        //     }
+        //     Console.WriteLine(num[i] + " ");
+        // }
+        ////foreach(int number in num)
+        // {
+        //     Console.WriteLine(number);
+        // }
+
+        //Console.WriteLine("Enter a numbers");
+        //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+        //for (int i = 0; i < arr.Length; i++)
+        //{
+        //    for (int j = i + 1; j < arr.Length; j++)
+        //    {
+        //        if (arr[i] > arr[j])
+        //        {
+        //            int swap = arr[i];
+        //            arr[i] = arr[j];
+        //            arr[j] = swap;
+        //        }
+        //    }
+        //    Console.Write(arr[i] + " ");
+        //}
+
+        //
+
+        //Factorial Method 
+
+        Console.WriteLine("The number is ");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        int fact = 1;
+
+        for (int i = num; i >= 1; i--)
         {
-            bool isrepeating = false;
+            fact = fact * i;
+        }
 
-            for (int j = i; j < str.Length; j++)
-            {
-                if (i != j && str[i] == str[j])
-                {
-                    isrepeating = true;
-                    break;
-                }
-            }
-                if(!isrepeating)
-                {
-                    Console.WriteLine(str[i]);
-                break;
-                }
-            }
-        
-       
-
-
+        Console.WriteLine(fact);
 
     }
-
-
 }
+
+
+
 
 
 
