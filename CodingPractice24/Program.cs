@@ -1886,17 +1886,142 @@ class Program
 
         //Factorial Method 
 
-        Console.WriteLine("The number is ");
-        int num = Convert.ToInt32(Console.ReadLine());
+        //Console.WriteLine("The number is ");
+        //int num = Convert.ToInt32(Console.ReadLine());
 
-        int fact = 1;
+        //int fact = 1;
 
-        for (int i = num; i >= 1; i--)
+        //for (int i = num; i >= 1; i--)
+        //{
+        //    fact = fact * i;
+        //}
+
+        //Console.WriteLine(fact);
+
+        //find squareroot of number
+
+        //Console.WriteLine("Enter a Number");
+        //int num = Convert.ToInt32(Console.ReadLine());
+
+        //for(int i=0; i<=num; i++)
+        //{
+        //    if(i*i==num)
+        //    {
+        //        Console.WriteLine("The squareroot is:" + i);
+        //        break;
+        //    }
+        //}
+
+        //Console.WriteLine("Enter a Number");
+        //double num = Convert.ToDouble(Console.ReadLine());
+
+        //double i = 1;
+
+        //while (i * i <= num)
+        //{
+        //    i = i + 0.01;
+        //}
+
+        //Console.WriteLine("Square Root is: " + (i - 0.01));
+
+        //Console.WriteLine("Enter a Number");
+        //double num = Convert.ToDouble(Console.ReadLine());
+
+        //double i = 1;
+
+        //while (i * i < num)
+        //{
+        //    i = i + 0.000001;
+        //}
+
+        //Console.WriteLine("Square Root is: " + i);
+
+        //find missing number in array for sequence only
+
+        //Console.WriteLine("Enter a Number");
+        //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        //int n = arr.Length + 1;
+        //int expectedsum = n * (n + 1 )/ 2;
+        //int actualsum = 0;
+
+        //for(int i=0; i<arr.Length; i++)
+        //{
+        //    actualsum += arr[i];
+        //}
+
+        //int missing = expectedsum - actualsum;
+
+        //Console.WriteLine(missing);
+
+        //move all zeroes to end 
+
+        //Console.WriteLine("Enter a Numbers");
+        //int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        //int index = 0;
+
+        //for(int i=0; i<arr.Length; i++)
+        //{
+        //    if (arr[i] !=0)
+        //    {
+        //        arr[index] = arr[i];
+        //        index++;
+        //    }          
+        //}
+        //for (int i = index; i < arr.Length; i++)
+        //{
+        //    arr[i] = 0;
+        //}
+
+        //foreach (int num in arr)
+        //{
+        //    Console.WriteLine(num);
+        //}
+
+        //count the frequency of consonant in string/sentence
+
+        Console.WriteLine("Enter a string:");
+        string str = Console.ReadLine();
+
+        for (int i = 0; i < str.Length; i++)
         {
-            fact = fact * i;
-        }
+            char ch = str[i];
 
-        Console.WriteLine(fact);
+            // check if alphabet
+
+            if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+            {
+                // check if NOT vowel (i.e., consonant)
+                if (ch != 'a' && ch != 'e' && ch != 'i' && ch != 'o' && ch != 'u' &&
+                    ch != 'A' && ch != 'E' && ch != 'I' && ch != 'O' && ch != 'U')
+                {
+                    int count = 1;
+                    // check if already counted
+                    bool alreadyCounted = false;
+                    for (int k = 0; k < i; k++)
+                    {
+                        if (str[k] == ch)
+                        {
+                            alreadyCounted = true;
+                            break;
+                        }
+                    }
+                    if (alreadyCounted)
+                        continue;
+
+                    // count occurrences
+                    for (int j = i + 1; j < str.Length; j++)
+                    {
+                        if (str[j] == ch)
+                        {
+                            count++;
+                        }
+                    }
+                    Console.WriteLine(ch + " = " + count);
+                }
+            }
+        }
 
     }
 }
