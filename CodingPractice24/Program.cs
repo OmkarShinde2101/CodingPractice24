@@ -1981,47 +1981,107 @@ class Program
 
         //count the frequency of consonant in string/sentence
 
-        Console.WriteLine("Enter a string:");
+        //Console.WriteLine("Enter a string:");
+        //string str = Console.ReadLine();
+
+        //for (int i = 0; i < str.Length; i++)
+        //{
+        //    char ch = str[i];
+
+        //    // check if alphabet
+
+        //    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+        //    {
+        //        // check if NOT vowel (i.e., consonant)
+        //        if (ch != 'a' && ch != 'e' && ch != 'i' && ch != 'o' && ch != 'u' &&
+        //            ch != 'A' && ch != 'E' && ch != 'I' && ch != 'O' && ch != 'U')
+        //        {
+        //            int count = 1;
+        //            // check if already counted
+        //            bool alreadyCounted = false;
+        //            for (int k = 0; k < i; k++)
+        //            {
+        //                if (str[k] == ch)
+        //                {
+        //                    alreadyCounted = true;
+        //                    break;
+        //                }
+        //            }
+        //            if (alreadyCounted)
+        //                continue;
+
+        //            // count occurrences
+        //            for (int j = i + 1; j < str.Length; j++)
+        //            {
+        //                if (str[j] == ch)
+        //                {
+        //                    count++;
+        //                }
+        //            }
+        //            Console.WriteLine(ch + " = " + count);
+        //        }
+        //    }
+        //}
+
+        //find first nonrepeating character in string sentence
+
+        //Console.WriteLine("Enter a string");
+        //string str = Console.ReadLine();
+
+        //for (int i = 0; i < str.Length; i++)
+        //{
+        //    bool isrepeating = false;
+
+        //    for (int j = 0; j < str.Length; j++)
+        //    {
+        //        if (i != j && str[i] == str[j])
+        //        {
+        //            isrepeating = true;
+        //            break;
+        //        }
+        //    }
+        //        if(!isrepeating)
+        //        {
+        //        Console.WriteLine(str[i]);
+        //        break;
+        //        }
+        //    }
+
+        //count word frequency in sentence/string
+
+        Console.WriteLine("Enter a sentence");
         string str = Console.ReadLine();
 
         for (int i = 0; i < str.Length; i++)
         {
-            char ch = str[i];
+            int count = 1;
 
-            // check if alphabet
+            bool alreadycounted = false;
 
-            if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+            for (int k = 0; k < i; k++)
             {
-                // check if NOT vowel (i.e., consonant)
-                if (ch != 'a' && ch != 'e' && ch != 'i' && ch != 'o' && ch != 'u' &&
-                    ch != 'A' && ch != 'E' && ch != 'I' && ch != 'O' && ch != 'U')
+                if (str[i] == str[k])
                 {
-                    int count = 1;
-                    // check if already counted
-                    bool alreadyCounted = false;
-                    for (int k = 0; k < i; k++)
-                    {
-                        if (str[k] == ch)
-                        {
-                            alreadyCounted = true;
-                            break;
-                        }
-                    }
-                    if (alreadyCounted)
-                        continue;
-
-                    // count occurrences
-                    for (int j = i + 1; j < str.Length; j++)
-                    {
-                        if (str[j] == ch)
-                        {
-                            count++;
-                        }
-                    }
-                    Console.WriteLine(ch + " = " + count);
+                    alreadycounted = true;
+                    break;
                 }
             }
+            if (alreadycounted)
+                continue;
+
+            for(int j=i+1; j<str.Length; j++)
+            {
+                if (str[i]== str[j])
+                {
+                    count++;
+                }
+            }
+
+            Console.WriteLine(str[i] + "=" + count);
         }
+        
+        
+
 
     }
 }
